@@ -21,39 +21,39 @@
 
     "//": "Macros configurations",
     "MACROS": {
-        "user_proj_example": {
+        "rgb_mixer": {
             "gds": [
-                "dir::../../gds/user_proj_example.gds"
+                "dir::../../gds/rgb_mixer.gds"
             ],
             "lef": [
-                "dir::../../lef/user_proj_example.lef"
+                "dir::../../lef/rgb_mixer.lef"
             ],
             "instances": {
-                "mprj": {
-                    "location": [60, 15],
+                "rgb_mixer": {
+                    "location": [260, 150],
                     "orientation": "N"
                 }
             },
             "nl": [
-                "dir::../../verilog/gl/user_proj_example.v"
+                "dir::../../verilog/gl/rgb_mixer.v"
             ],
             "spef": {
                 "min_*": [
-                    "dir::../../spef/multicorner/user_proj_example.min.spef"
+                    "dir::../../spef/multicorner/rgb_mixer.min.spef"
                 ],
                 "nom_*": [
-                    "dir::../../spef/multicorner/user_proj_example.nom.spef"
+                    "dir::../../spef/multicorner/rgb_mixer.nom.spef"
                 ],
                 "max_*": [
-                    "dir::../../spef/multicorner/user_proj_example.max.spef"
+                    "dir::../../spef/multicorner/rgb_mixer.max.spef"
                 ]
             },
             "lib": {
-                "*": "dir::../../lib/user_proj_example.lib"
+                "*": "dir::../../lib/rgb_mixer.lib"
             }
         }
     },
-    "PDN_MACRO_CONNECTIONS": ["mprj vccd2 vssd2 vccd1 vssd1"],
+    "PDN_MACRO_CONNECTIONS": ["rgb_mixer vccd2 vssd2 vccd1 vssd1"],
 
     "//": "PDN configurations",
     "FP_PDN_VOFFSET": 5,

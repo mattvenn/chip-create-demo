@@ -1,0 +1,101 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Tue Oct  3 12:25:44 2023
+[*]
+[dumpfile] "/home/zerotoasic/asic_tools/caravel_user_project/verilog/dv/cocotb/sim/rgb_mixer/RTL-rgb_mixer/waves.vcd"
+[dumpfile_mtime] "Tue Oct  3 12:18:17 2023"
+[dumpfile_size] 155985802
+[savefile] "/home/zerotoasic/asic_tools/caravel_user_project/verilog/dv/cocotb/rgb_mixer/rgb_mixer.gtkw"
+[timestart] 2525000000
+[size] 2418 1244
+[pos] -1 -1
+*-27.920555 4152225000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] caravel_top.
+[treeopen] caravel_top.uut.
+[treeopen] caravel_top.uut.chip_core.
+[treeopen] caravel_top.uut.chip_core.mprj.
+[treeopen] caravel_top.uut.chip_core.mprj.rgb_mixer.
+[sst_width] 297
+[signals_width] 814
+[sst_expanded] 1
+[sst_vpaned_height] 750
+@28
+caravel_top.uut.chip_core.mprj.rgb_mixer.clk
+caravel_top.uut.chip_core.mprj.rgb_mixer.reset
+caravel_top.uut.chip_core.mprj.rgb_mixer.sync
+caravel_top.uut.chip_core.mprj.rgb_mixer.enc0_a
+caravel_top.uut.chip_core.mprj.rgb_mixer.enc0_b
+caravel_top.uut.chip_core.mprj.rgb_mixer.enc1_a
+caravel_top.uut.chip_core.mprj.rgb_mixer.enc1_b
+caravel_top.uut.chip_core.mprj.rgb_mixer.enc2_a
+caravel_top.uut.chip_core.mprj.rgb_mixer.enc2_b
+caravel_top.uut.chip_core.mprj.rgb_mixer.pwm0_out
+caravel_top.uut.chip_core.mprj.rgb_mixer.pwm1_out
+caravel_top.uut.chip_core.mprj.rgb_mixer.pwm2_out
+caravel_top.uut.chip_core.mprj.rgb_mixer.vccd1
+caravel_top.uut.chip_core.mprj.rgb_mixer.vssd1
+caravel_top.uut.chip_core.mprj.wb_clk_i
+caravel_top.flash_clk_tb
+caravel_top.flash_csb_tb
+caravel_top.flash_io0_tb
+caravel_top.flash_io1_tb
+caravel_top.uut.gpio
+@22
+caravel_top.uut.chip_core.mprj.la_data_out[127:0]
+caravel_top.uut.chip_core.mprj.la_oenb[127:0]
+caravel_top.uut.chip_core.mprj.la_data_in[127:0]
+caravel_top.uut.mprj_io_in[37:0]
+@c00022
+caravel_top.uut.mprj_io[37:0]
+@28
+(0)caravel_top.uut.mprj_io[37:0]
+(1)caravel_top.uut.mprj_io[37:0]
+(2)caravel_top.uut.mprj_io[37:0]
+(3)caravel_top.uut.mprj_io[37:0]
+(4)caravel_top.uut.mprj_io[37:0]
+(5)caravel_top.uut.mprj_io[37:0]
+(6)caravel_top.uut.mprj_io[37:0]
+(7)caravel_top.uut.mprj_io[37:0]
+(8)caravel_top.uut.mprj_io[37:0]
+(9)caravel_top.uut.mprj_io[37:0]
+(10)caravel_top.uut.mprj_io[37:0]
+(11)caravel_top.uut.mprj_io[37:0]
+(12)caravel_top.uut.mprj_io[37:0]
+(13)caravel_top.uut.mprj_io[37:0]
+(14)caravel_top.uut.mprj_io[37:0]
+(15)caravel_top.uut.mprj_io[37:0]
+(16)caravel_top.uut.mprj_io[37:0]
+(17)caravel_top.uut.mprj_io[37:0]
+(18)caravel_top.uut.mprj_io[37:0]
+(19)caravel_top.uut.mprj_io[37:0]
+(20)caravel_top.uut.mprj_io[37:0]
+(21)caravel_top.uut.mprj_io[37:0]
+(22)caravel_top.uut.mprj_io[37:0]
+(23)caravel_top.uut.mprj_io[37:0]
+(24)caravel_top.uut.mprj_io[37:0]
+(25)caravel_top.uut.mprj_io[37:0]
+(26)caravel_top.uut.mprj_io[37:0]
+(27)caravel_top.uut.mprj_io[37:0]
+(28)caravel_top.uut.mprj_io[37:0]
+(29)caravel_top.uut.mprj_io[37:0]
+(30)caravel_top.uut.mprj_io[37:0]
+(31)caravel_top.uut.mprj_io[37:0]
+(32)caravel_top.uut.mprj_io[37:0]
+(33)caravel_top.uut.mprj_io[37:0]
+(34)caravel_top.uut.mprj_io[37:0]
+(35)caravel_top.uut.mprj_io[37:0]
+(36)caravel_top.uut.mprj_io[37:0]
+(37)caravel_top.uut.mprj_io[37:0]
+@1401200
+-group_end
+@22
+caravel_top.mprj_io_tb[37:0]
+@28
+caravel_top.gpio8
+caravel_top.gpio8_en
+caravel_top.gpio8_monitor
+caravel_top.gpio14
+@29
+caravel_top.gpio14_monitor
+[pattern_trace] 1
+[pattern_trace] 0

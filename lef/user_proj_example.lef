@@ -4680,7 +4680,7 @@ MACRO user_proj_example
   END wbs_we_i
   OBS
       LAYER nwell ;
-        RECT 5.330 10.795 2794.230 1749.150 ;
+        RECT 5.330 10.760 2794.230 1749.150 ;
       LAYER li1 ;
         RECT 5.520 10.795 2794.040 1749.045 ;
       LAYER met1 ;

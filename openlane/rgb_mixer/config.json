@@ -1,0 +1,17 @@
+{
+    "DESIGN_IS_CORE": "0",
+    "RT_MAX_LAYER": "met4",
+    "DESIGN_NAME": "rgb_mixer",
+    "VDD_NETS": ["vccd1"],
+    "GND_NETS": ["vssd1"],
+    "VERILOG_FILES": [
+         "dir::../../verilog/rtl/rgb_mixer_2025/src/rgb_mixer.v", 
+         "dir::../../verilog/rtl/rgb_mixer_2025/src/encoder.v", 
+         "dir::../../verilog/rtl/rgb_mixer_2025/src/pwm.v", 
+         "dir::../../verilog/rtl/rgb_mixer_2025/src/debounce.v"
+         ],
+    "DIE_AREA": "0 0 150 250",
+    "FP_SIZING": "absolute",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 20
+}

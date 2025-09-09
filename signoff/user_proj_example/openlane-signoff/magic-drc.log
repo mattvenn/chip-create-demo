@@ -1,5 +1,5 @@
 
-Magic 8.3 revision 489 - Compiled on Thu Aug 22 13:35:24 UTC 2024.
+Magic 8.3 revision 489 - Compiled on Thu Aug 22 13:45:15 UTC 2024.
 Starting magic under Tcl interpreter
 Using the terminal as the console.
 Using NULL graphics device.
@@ -11,21 +11,20 @@ The following types are not handled by extraction and will be treated as non-ele
     ubm 
 Scaled tech values by 2 / 1 to match internal grid scaling
 Loading sky130A Device Generator Menu ...
-Loading "/nix/store/syjbsfibk688fmnmjmfyh577xcrg6wrx-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/magic/wrapper.tcl" from command line.
+Loading "/nix/store/pqxyc4xmydcs5adig47yyc29r3svp5nx-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/magic/wrapper.tcl" from command line.
 Warning: Calma reading is not undoable!  I hope that's OK.
 Library written using GDS-II Release 3.0
 Library name: user_proj_example
-Reading "sky130_ef_sc_hd__decap_12".
+Reading "sky130_ef_sc_hd__decap_40_12".
 Reading "sky130_fd_sc_hd__decap_3".
 Reading "sky130_fd_sc_hd__fill_1".
 Reading "sky130_fd_sc_hd__tapvpwrvgnd_1".
-Reading "sky130_fd_sc_hd__decap_4".
 Reading "sky130_fd_sc_hd__fill_2".
+Reading "sky130_fd_sc_hd__fill_4".
 Reading "sky130_fd_sc_hd__buf_4".
-Reading "sky130_fd_sc_hd__decap_8".
+Reading "sky130_fd_sc_hd__fill_8".
 Reading "sky130_fd_sc_hd__diode_2".
 Reading "sky130_fd_sc_hd__buf_12".
-Reading "sky130_fd_sc_hd__decap_6".
 Reading "sky130_fd_sc_hd__clkbuf_8".
 Reading "sky130_fd_sc_hd__dlygate4sd3_1".
 Reading "sky130_fd_sc_hd__clkbuf_4".
@@ -194,6 +193,20 @@ Reading "user_proj_example".
     475000 uses
     480000 uses
     485000 uses
+    490000 uses
+    495000 uses
+    500000 uses
+    505000 uses
+    510000 uses
+    515000 uses
+    520000 uses
+    525000 uses
+    530000 uses
+    535000 uses
+    540000 uses
+    545000 uses
+    550000 uses
+    555000 uses
 [INFO] Loading user_proj_example
 
 DRC style is now "drc(full)"
@@ -201,6 +214,6 @@ Loading DRC CIF style.
 No errors found.
 [INFO] COUNT: 0
 [INFO] Should be divided by 3 or 4
-[INFO] DRC Checking DONE (/Users/donn/Code/chipfoundry/caravel_user_project/openlane/user_proj_example/runs/25_07_17_04_59/65-magic-drc/reports/drc_violations.magic.rpt)
-[INFO] Saving mag view with DRC errors (/Users/donn/Code/chipfoundry/caravel_user_project/openlane/user_proj_example/runs/25_07_17_04_59/65-magic-drc/views/user_proj_example.drc.mag)
+[INFO] DRC Checking DONE (/home/matt/work/asic-workshop/chip-foundry/chip-create-demo/openlane/user_proj_example/runs/25_09_09_15_20/65-magic-drc/reports/drc_violations.magic.rpt)
+[INFO] Saving mag view with DRC errors (/home/matt/work/asic-workshop/chip-foundry/chip-create-demo/openlane/user_proj_example/runs/25_09_09_15_20/65-magic-drc/views/user_proj_example.drc.mag)
 [INFO] Saved

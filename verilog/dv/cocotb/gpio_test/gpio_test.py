@@ -27,7 +27,7 @@ async def gpio_test(dut):
    cocotb.log.info (f"All gpios '{gpios_value_str}'")
    gpio_value_int = caravelEnv.monitor_gpio(37, 0).integer
    #expected_gpio_value = 0xF8
-   expected_gpio_value = 0x8F
+   expected_gpio_value = 0xAA
    if (gpio_value_int == expected_gpio_value):
       cocotb.log.info (f"[TEST] Pass the gpio value is '{hex(gpio_value_int)}'")
    else:

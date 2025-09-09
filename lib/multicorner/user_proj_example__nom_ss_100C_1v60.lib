@@ -108,7 +108,7 @@ library (user_proj_example) {
   }
 
   cell ("user_proj_example") {
-    area : 533473.562 
+    area : 13548.028 
     is_macro_cell : true;
     pin("wb_clk_i") {
       direction : input;
