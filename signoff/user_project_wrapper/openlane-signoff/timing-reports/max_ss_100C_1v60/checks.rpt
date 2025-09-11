@@ -5,91 +5,115 @@ report_checks -unconstrained
 ======================= max_ss_100C_1v60 Corner ===================================
 
 Startpoint: wb_rst_i (input port clocked by clk)
-Endpoint: mprj/_305_ (rising edge-triggered flip-flop clocked by clk)
-Path Group: clk
+Endpoint: rgb_mixer/_716_ (recovery check against rising-edge clock clk)
+Path Group: asynchronous
 Path Type: max
 
 Fanout         Cap        Slew       Delay        Time   Description
 ---------------------------------------------------------------------------------------------
                                   0.000000    0.000000   clock clk (rise edge)
                                   5.570000    5.570000   clock network delay (propagated)
-                                 12.500000   18.070000 ^ input external delay
-     2    0.029866    0.000000    0.000000   18.070000 ^ wb_rst_i (in)
+                                 12.500000   18.070000 v input external delay
+     2    0.049411    0.000000    0.000000   18.070000 v wb_rst_i (in)
                                                          wb_rst_i (net)
-                      0.002043    0.001021   18.071020 ^ mprj/input37/A (sky130_fd_sc_hd__buf_4)
-     3    0.111563    0.490968    0.453637   18.524658 ^ mprj/input37/X (sky130_fd_sc_hd__buf_4)
-                                                         mprj/net37 (net)
-                      0.499272    0.051172   18.575829 ^ mprj/_153_/A1 (sky130_fd_sc_hd__a21oi_4)
-     1    0.005400    0.118388    0.224224   18.800055 v mprj/_153_/Y (sky130_fd_sc_hd__a21oi_4)
-                                                         mprj/_039_ (net)
-                      0.118388    0.000288   18.800341 v mprj/hold50/A (sky130_fd_sc_hd__dlygate4sd3_1)
-     1    0.004936    0.128301    1.179540   19.979881 v mprj/hold50/X (sky130_fd_sc_hd__dlygate4sd3_1)
-                                                         mprj/net324 (net)
-                      0.128301    0.000338   19.980219 v mprj/hold8/A (sky130_fd_sc_hd__dlygate4sd3_1)
-    15    0.063834    0.608758    1.639434   21.619652 v mprj/hold8/X (sky130_fd_sc_hd__dlygate4sd3_1)
-                                                         mprj/net282 (net)
-                      0.608824    0.006569   21.626221 v mprj/hold51/A (sky130_fd_sc_hd__dlygate4sd3_1)
-     7    0.045452    0.455615    1.756908   23.383129 v mprj/hold51/X (sky130_fd_sc_hd__dlygate4sd3_1)
-                                                         mprj/net325 (net)
-                      0.455615    0.001808   23.384937 v mprj/_160_/A (sky130_fd_sc_hd__nand2_2)
-     2    0.016709    0.203175    0.329708   23.714645 ^ mprj/_160_/Y (sky130_fd_sc_hd__nand2_2)
-                                                         mprj/_044_ (net)
-                      0.203190    0.001879   23.716524 ^ mprj/hold52/A (sky130_fd_sc_hd__dlygate4sd3_1)
-     5    0.050872    0.768606    1.615794   25.332317 ^ mprj/hold52/X (sky130_fd_sc_hd__dlygate4sd3_1)
-                                                         mprj/net326 (net)
-                      0.768623    0.004578   25.336897 ^ mprj/fanout124/A (sky130_fd_sc_hd__buf_6)
-    33    0.141612    0.447056    0.662691   25.999588 ^ mprj/fanout124/X (sky130_fd_sc_hd__buf_6)
-                                                         mprj/net124 (net)
-                      0.447163    0.006048   26.005636 ^ mprj/_161_/A (sky130_fd_sc_hd__inv_2)
-     2    0.007357    0.099004    0.181235   26.186871 v mprj/_161_/Y (sky130_fd_sc_hd__inv_2)
-                                                         mprj/_000_ (net)
-                      0.099004    0.000346   26.187216 v mprj/_233_/A2 (sky130_fd_sc_hd__a32o_1)
-     1    0.002258    0.066735    0.438190   26.625406 v mprj/_233_/X (sky130_fd_sc_hd__a32o_1)
-                                                         mprj/_009_ (net)
-                      0.066735    0.000092   26.625500 v mprj/hold157/A (sky130_fd_sc_hd__dlygate4sd3_1)
-     1    0.002239    0.101244    1.112467   27.737967 v mprj/hold157/X (sky130_fd_sc_hd__dlygate4sd3_1)
-                                                         mprj/net431 (net)
-                      0.101244    0.000160   27.738125 v mprj/hold41/A (sky130_fd_sc_hd__dlygate4sd3_1)
-     1    0.002796    0.105541    1.137940   28.876064 v mprj/hold41/X (sky130_fd_sc_hd__dlygate4sd3_1)
-                                                         mprj/net315 (net)
-                      0.105541    0.000208   28.876272 v mprj/hold158/A (sky130_fd_sc_hd__dlygate4sd3_1)
-     1    0.001921    0.098113    1.125233   30.001507 v mprj/hold158/X (sky130_fd_sc_hd__dlygate4sd3_1)
-                                                         mprj/net432 (net)
-                      0.098113    0.000139   30.001644 v mprj/_305_/D (sky130_fd_sc_hd__dfxtp_4)
-                                             30.001644   data arrival time
+                      0.005824    0.002911   18.072910 v rgb_mixer/input7/A (sky130_fd_sc_hd__buf_1)
+     3    0.013453    0.161011    0.220593   18.293505 v rgb_mixer/input7/X (sky130_fd_sc_hd__buf_1)
+                                                         rgb_mixer/net7 (net)
+                      0.161012    0.000787   18.294291 v rgb_mixer/_714_/A (sky130_fd_sc_hd__inv_2)
+     1    0.004093    0.060115    0.108313   18.402605 ^ rgb_mixer/_714_/Y (sky130_fd_sc_hd__inv_2)
+                                                         rgb_mixer/_001_ (net)
+                      0.060115    0.000112   18.402716 ^ rgb_mixer/_716_/SET_B (sky130_fd_sc_hd__dfstp_1)
+                                             18.402716   data arrival time
 
                                  25.000000   25.000000   clock clk (rise edge)
                                   4.650000   29.650000   clock source latency
-     2    0.052715    0.610000    0.000000   29.650000 ^ wb_clk_i (in)
+     2    0.089026    0.610000    0.000000   29.650000 ^ wb_clk_i (in)
                                                          wb_clk_i (net)
-                      0.622287    0.006144   29.656143 ^ mprj/wire3/A (sky130_fd_sc_hd__buf_4)
-     3    0.050133    0.234641    0.555509   30.211653 ^ mprj/wire3/X (sky130_fd_sc_hd__buf_4)
-                                                         mprj/net274 (net)
-                      0.235516    0.010623   30.222275 ^ mprj/wire2/A (sky130_fd_sc_hd__buf_6)
-     3    0.112773    0.356296    0.457199   30.679474 ^ mprj/wire2/X (sky130_fd_sc_hd__buf_6)
-                                                         mprj/net273 (net)
-                      0.357179    0.014580   30.694054 ^ mprj/_155_/A1 (sky130_fd_sc_hd__mux2_1)
-     3    0.055386    0.769394    0.863743   31.557796 ^ mprj/_155_/X (sky130_fd_sc_hd__mux2_1)
-                                                         mprj/clk (net)
-                      0.769420    0.005244   31.563042 ^ mprj/wire1/A (sky130_fd_sc_hd__buf_4)
-     3    0.052155    0.244788    0.600860   32.163902 ^ mprj/wire1/X (sky130_fd_sc_hd__buf_4)
-                                                         mprj/net272 (net)
-                      0.245654    0.010747   32.174648 ^ mprj/clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
-     9    0.098015    0.174219    0.388955   32.563602 ^ mprj/clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
-                                                         mprj/clknet_0_clk (net)
-                      0.174993    0.008434   32.572037 ^ mprj/clkbuf_2_2__f_clk/A (sky130_fd_sc_hd__clkbuf_16)
-    21    0.068929    0.133024    0.325134   32.897171 ^ mprj/clkbuf_2_2__f_clk/X (sky130_fd_sc_hd__clkbuf_16)
-                                                         mprj/clknet_2_2__leaf_clk (net)
-                      0.135672    0.014722   32.911892 ^ mprj/_305_/CLK (sky130_fd_sc_hd__dfxtp_4)
-                                 -0.250000   32.661892   clock uncertainty
-                                  0.000000   32.661892   clock reconvergence pessimism
-                                 -0.267000   32.394890   library setup time
-                                             32.394890   data required time
+                      0.656491    0.023245   29.673244 ^ rgb_mixer/clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+    33    0.149094    0.250341    0.609491   30.282736 ^ rgb_mixer/clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         rgb_mixer/clknet_0_clk (net)
+                      0.250754    0.008981   30.291718 ^ rgb_mixer/clkbuf_4_1_0_clk/A (sky130_fd_sc_hd__clkbuf_8)
+    10    0.028376    0.104495    0.336254   30.627970 ^ rgb_mixer/clkbuf_4_1_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         rgb_mixer/clknet_4_1_0_clk (net)
+                      0.104543    0.002078   30.630049 ^ rgb_mixer/_716_/CLK (sky130_fd_sc_hd__dfstp_1)
+                                 -0.250000   30.380047   clock uncertainty
+                                  0.000000   30.380047   clock reconvergence pessimism
+                                  0.280052   30.660101   library recovery time
+                                             30.660101   data required time
 ---------------------------------------------------------------------------------------------
-                                             32.394890   data required time
-                                            -30.001644   data arrival time
+                                             30.660101   data required time
+                                            -18.402716   data arrival time
 ---------------------------------------------------------------------------------------------
-                                              2.393247   slack (MET)
+                                             12.257385   slack (MET)
+
+
+Startpoint: rgb_mixer/_716_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: rgb_mixer/_717_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock clk (rise edge)
+                                  5.570000    5.570000   clock source latency
+     2    0.089026    0.610000    0.000000    5.570000 ^ wb_clk_i (in)
+                                                         wb_clk_i (net)
+                      0.656491    0.023245    5.593246 ^ rgb_mixer/clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+    33    0.149094    0.250341    0.609492    6.202738 ^ rgb_mixer/clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         rgb_mixer/clknet_0_clk (net)
+                      0.250754    0.008980    6.211718 ^ rgb_mixer/clkbuf_4_1_0_clk/A (sky130_fd_sc_hd__clkbuf_8)
+    10    0.028376    0.104495    0.336254    6.547972 ^ rgb_mixer/clkbuf_4_1_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         rgb_mixer/clknet_4_1_0_clk (net)
+                      0.104543    0.002079    6.550050 ^ rgb_mixer/_716_/CLK (sky130_fd_sc_hd__dfstp_1)
+     1    0.003397    0.083969    1.086200    7.636251 ^ rgb_mixer/_716_/Q (sky130_fd_sc_hd__dfstp_1)
+                                                         rgb_mixer/debounce0_a.reset (net)
+                      0.083969    0.000224    7.636475 ^ rgb_mixer/hold116/A (sky130_fd_sc_hd__dlygate4sd3_1)
+     5    0.024554    0.392172    1.295652    8.932126 ^ rgb_mixer/hold116/X (sky130_fd_sc_hd__dlygate4sd3_1)
+                                                         rgb_mixer/net146 (net)
+                      0.392179    0.002327    8.934453 ^ rgb_mixer/fanout19/A (sky130_fd_sc_hd__clkbuf_4)
+    19    0.066853    0.322018    0.574935    9.509388 ^ rgb_mixer/fanout19/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         rgb_mixer/net19 (net)
+                      0.322027    0.002489    9.511877 ^ rgb_mixer/fanout18/A (sky130_fd_sc_hd__clkbuf_4)
+    14    0.059915    0.292345    0.524460   10.036338 ^ rgb_mixer/fanout18/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         rgb_mixer/net18 (net)
+                      0.292351    0.001874   10.038212 ^ rgb_mixer/fanout17/A (sky130_fd_sc_hd__clkbuf_4)
+    16    0.051653    0.255418    0.483039   10.521251 ^ rgb_mixer/fanout17/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         rgb_mixer/net17 (net)
+                      0.255612    0.006381   10.527632 ^ rgb_mixer/_385_/A_N (sky130_fd_sc_hd__and2b_1)
+     2    0.006191    0.093137    0.460861   10.988492 v rgb_mixer/_385_/X (sky130_fd_sc_hd__and2b_1)
+                                                         rgb_mixer/_005_ (net)
+                      0.093137    0.000412   10.988904 v rgb_mixer/_387_/A3 (sky130_fd_sc_hd__a41o_1)
+     1    0.003483    0.074393    0.416734   11.405639 v rgb_mixer/_387_/X (sky130_fd_sc_hd__a41o_1)
+                                                         rgb_mixer/_137_ (net)
+                      0.074393    0.000233   11.405871 v rgb_mixer/_390_/A2 (sky130_fd_sc_hd__a22o_1)
+     1    0.003155    0.074262    0.412342   11.818213 v rgb_mixer/_390_/X (sky130_fd_sc_hd__a22o_1)
+                                                         rgb_mixer/_002_ (net)
+                      0.074262    0.000187   11.818400 v rgb_mixer/hold22/A (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.002486    0.103101    1.119877   12.938276 v rgb_mixer/hold22/X (sky130_fd_sc_hd__dlygate4sd3_1)
+                                                         rgb_mixer/net52 (net)
+                      0.103101    0.000158   12.938435 v rgb_mixer/_717_/D (sky130_fd_sc_hd__dfxtp_1)
+                                             12.938435   data arrival time
+
+                                 25.000000   25.000000   clock clk (rise edge)
+                                  4.650000   29.650000   clock source latency
+     2    0.089026    0.610000    0.000000   29.650000 ^ wb_clk_i (in)
+                                                         wb_clk_i (net)
+                      0.656491    0.023245   29.673244 ^ rgb_mixer/clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+    33    0.149094    0.250341    0.609491   30.282736 ^ rgb_mixer/clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         rgb_mixer/clknet_0_clk (net)
+                      0.250832    0.009713   30.292448 ^ rgb_mixer/clkbuf_4_13_0_clk/A (sky130_fd_sc_hd__clkbuf_8)
+     8    0.033899    0.115544    0.347750   30.640200 ^ rgb_mixer/clkbuf_4_13_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         rgb_mixer/clknet_4_13_0_clk (net)
+                      0.115577    0.001886   30.642086 ^ rgb_mixer/_717_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                 -0.250000   30.392084   clock uncertainty
+                                  0.920000   31.312084   clock reconvergence pessimism
+                                 -0.270452   31.041634   library setup time
+                                             31.041634   data required time
+---------------------------------------------------------------------------------------------
+                                             31.041634   data required time
+                                            -12.938435   data arrival time
+---------------------------------------------------------------------------------------------
+                                             18.103199   slack (MET)
 
 
 
@@ -111,59 +135,40 @@ max slew
 
 Pin                                        Limit        Slew       Slack
 ------------------------------------------------------------------------
-mprj/_152_/B                            1.500000    1.581131   -0.081131 (VIOLATED)
-mprj/ANTENNA__152__B/DIODE              1.500000    1.581118   -0.081119 (VIOLATED)
-mprj/hold48/X                           1.498918    1.578304   -0.079386 (VIOLATED)
-mprj/ANTENNA_hold48_X/DIODE             1.500000    1.578318   -0.078318 (VIOLATED)
+io_out[14]                              1.500000    5.045384   -3.545384 (VIOLATED)
+rgb_mixer/input6/A                      1.500000    4.879008   -3.379009 (VIOLATED)
+rgb_mixer/ANTENNA_input6_A/DIODE        1.500000    4.878983   -3.378983 (VIOLATED)
+io_out[15]                              1.500000    4.474202   -2.974202 (VIOLATED)
+io_out[16]                              1.500000    4.358761   -2.858762 (VIOLATED)
+rgb_mixer/input5/A                      1.500000    4.240110   -2.740110 (VIOLATED)
+rgb_mixer/ANTENNA_input5_A/DIODE        1.500000    4.240084   -2.740084 (VIOLATED)
+io_out[17]                              1.500000    2.724021   -1.224021 (VIOLATED)
 
 max fanout
 
 Pin                                   Limit Fanout  Slack
 ---------------------------------------------------------
-mprj/fanout124/X                         10     33    -23 (VIOLATED)
-mprj/fanout125/X                         10     33    -23 (VIOLATED)
-mprj/_159_/Y                             10     29    -19 (VIOLATED)
-mprj/_156_/X                             10     27    -17 (VIOLATED)
-mprj/_195_/X                             10     23    -13 (VIOLATED)
-mprj/_182_/X                             10     21    -11 (VIOLATED)
-mprj/clkbuf_2_2__f_clk/X                 10     21    -11 (VIOLATED)
-mprj/_176_/Y                             10     19     -9 (VIOLATED)
-mprj/_297_/Q                             10     19     -9 (VIOLATED)
-mprj/clkbuf_2_1__f_clk/X                 10     19     -9 (VIOLATED)
-mprj/clkbuf_2_3__f_clk/X                 10     19     -9 (VIOLATED)
-mprj/clkbuf_2_0__f_clk/X                 10     17     -7 (VIOLATED)
-mprj/hold140/X                           10     17     -7 (VIOLATED)
-mprj/wire4/X                             10     17     -7 (VIOLATED)
-mprj/_157_/Y                             10     15     -5 (VIOLATED)
-mprj/_298_/Q                             10     15     -5 (VIOLATED)
-mprj/_301_/Q                             10     15     -5 (VIOLATED)
-mprj/_305_/Q                             10     15     -5 (VIOLATED)
-mprj/hold8/X                             10     15     -5 (VIOLATED)
-mprj/_228_/X                             10     13     -3 (VIOLATED)
-mprj/_299_/Q                             10     13     -3 (VIOLATED)
-mprj/_302_/Q                             10     13     -3 (VIOLATED)
-mprj/_303_/Q                             10     13     -3 (VIOLATED)
-mprj/_309_/Q                             10     13     -3 (VIOLATED)
-mprj/_311_/Q                             10     13     -3 (VIOLATED)
-mprj/_158_/Y                             10     11        (VIOLATED)
-mprj/_175_/X                             10     11        (VIOLATED)
-mprj/_300_/Q                             10     11        (VIOLATED)
-mprj/_308_/Q                             10     11        (VIOLATED)
-mprj/_310_/Q                             10     11        (VIOLATED)
-mprj/_312_/Q                             10     11        (VIOLATED)
-
-max capacitance
-
-Pin                                        Limit         Cap       Slack
-------------------------------------------------------------------------
-mprj/hold48/X                           0.100718    0.106189   -0.005471 (VIOLATED)
+rgb_mixer/clkbuf_0_clk/X                 10     33    -23 (VIOLATED)
+rgb_mixer/fanout15/X                     10     21    -11 (VIOLATED)
+rgb_mixer/fanout19/X                     10     19     -9 (VIOLATED)
+rgb_mixer/fanout12/X                     10     16     -6 (VIOLATED)
+rgb_mixer/fanout13/X                     10     16     -6 (VIOLATED)
+rgb_mixer/fanout16/X                     10     16     -6 (VIOLATED)
+rgb_mixer/fanout17/X                     10     16     -6 (VIOLATED)
+rgb_mixer/fanout14/X                     10     14     -4 (VIOLATED)
+rgb_mixer/fanout18/X                     10     14     -4 (VIOLATED)
+rgb_mixer/_494_/Y                        10     12     -2 (VIOLATED)
+rgb_mixer/_547_/Y                        10     12     -2 (VIOLATED)
+rgb_mixer/_600_/Y                        10     12     -2 (VIOLATED)
+rgb_mixer/_489_/Y                        10     11        (VIOLATED)
+rgb_mixer/_542_/Y                        10     11        (VIOLATED)
 
 
 
 ===========================================================================
 report_parasitic_annotation -report_unannotated
 ============================================================================
-Found 186 unannotated drivers.
+Found 415 unannotated drivers.
  analog_io[0]
  analog_io[10]
  analog_io[11]
@@ -193,16 +198,14 @@ Found 186 unannotated drivers.
  analog_io[7]
  analog_io[8]
  analog_io[9]
- io_in[10]
- io_in[11]
- io_in[12]
- io_in[13]
+ io_in[0]
  io_in[14]
  io_in[15]
  io_in[16]
  io_in[17]
  io_in[18]
  io_in[19]
+ io_in[1]
  io_in[20]
  io_in[21]
  io_in[22]
@@ -213,149 +216,380 @@ Found 186 unannotated drivers.
  io_in[27]
  io_in[28]
  io_in[29]
- io_in[8]
- io_in[9]
+ io_in[2]
+ io_in[30]
+ io_in[31]
+ io_in[32]
+ io_in[33]
+ io_in[34]
+ io_in[35]
+ io_in[36]
+ io_in[37]
+ io_in[3]
+ io_in[4]
+ io_in[5]
+ io_in[6]
+ io_in[7]
+ la_data_in[0]
+ la_data_in[100]
+ la_data_in[101]
+ la_data_in[102]
+ la_data_in[103]
+ la_data_in[104]
+ la_data_in[105]
+ la_data_in[106]
+ la_data_in[107]
+ la_data_in[108]
+ la_data_in[109]
+ la_data_in[10]
+ la_data_in[110]
+ la_data_in[111]
+ la_data_in[112]
+ la_data_in[113]
+ la_data_in[114]
+ la_data_in[115]
+ la_data_in[116]
+ la_data_in[117]
+ la_data_in[118]
+ la_data_in[119]
+ la_data_in[11]
+ la_data_in[120]
+ la_data_in[121]
+ la_data_in[122]
+ la_data_in[123]
+ la_data_in[124]
+ la_data_in[125]
+ la_data_in[126]
+ la_data_in[127]
+ la_data_in[12]
+ la_data_in[13]
+ la_data_in[14]
+ la_data_in[15]
+ la_data_in[16]
+ la_data_in[17]
+ la_data_in[18]
+ la_data_in[19]
+ la_data_in[1]
+ la_data_in[20]
+ la_data_in[21]
+ la_data_in[22]
+ la_data_in[23]
+ la_data_in[24]
+ la_data_in[25]
+ la_data_in[26]
+ la_data_in[27]
+ la_data_in[28]
+ la_data_in[29]
+ la_data_in[2]
+ la_data_in[30]
+ la_data_in[31]
+ la_data_in[32]
+ la_data_in[33]
+ la_data_in[34]
+ la_data_in[35]
+ la_data_in[36]
+ la_data_in[37]
+ la_data_in[38]
+ la_data_in[39]
+ la_data_in[3]
+ la_data_in[40]
+ la_data_in[41]
+ la_data_in[42]
+ la_data_in[43]
+ la_data_in[44]
+ la_data_in[45]
+ la_data_in[46]
+ la_data_in[47]
+ la_data_in[48]
+ la_data_in[49]
+ la_data_in[4]
+ la_data_in[50]
+ la_data_in[51]
+ la_data_in[52]
+ la_data_in[53]
+ la_data_in[54]
+ la_data_in[55]
+ la_data_in[56]
+ la_data_in[57]
+ la_data_in[58]
+ la_data_in[59]
+ la_data_in[5]
+ la_data_in[60]
+ la_data_in[61]
+ la_data_in[62]
+ la_data_in[63]
+ la_data_in[64]
+ la_data_in[65]
+ la_data_in[66]
+ la_data_in[67]
+ la_data_in[68]
+ la_data_in[69]
+ la_data_in[6]
+ la_data_in[70]
+ la_data_in[71]
+ la_data_in[72]
+ la_data_in[73]
+ la_data_in[74]
+ la_data_in[75]
+ la_data_in[76]
+ la_data_in[77]
+ la_data_in[78]
+ la_data_in[79]
+ la_data_in[7]
+ la_data_in[80]
+ la_data_in[81]
+ la_data_in[82]
+ la_data_in[83]
+ la_data_in[84]
+ la_data_in[85]
+ la_data_in[86]
+ la_data_in[87]
+ la_data_in[88]
+ la_data_in[89]
+ la_data_in[8]
+ la_data_in[90]
+ la_data_in[91]
+ la_data_in[92]
+ la_data_in[93]
+ la_data_in[94]
+ la_data_in[95]
+ la_data_in[96]
+ la_data_in[97]
+ la_data_in[98]
+ la_data_in[99]
+ la_data_in[9]
+ la_oenb[0]
+ la_oenb[100]
+ la_oenb[101]
+ la_oenb[102]
+ la_oenb[103]
+ la_oenb[104]
+ la_oenb[105]
+ la_oenb[106]
+ la_oenb[107]
+ la_oenb[108]
+ la_oenb[109]
+ la_oenb[10]
+ la_oenb[110]
+ la_oenb[111]
+ la_oenb[112]
+ la_oenb[113]
+ la_oenb[114]
+ la_oenb[115]
+ la_oenb[116]
+ la_oenb[117]
+ la_oenb[118]
+ la_oenb[119]
+ la_oenb[11]
+ la_oenb[120]
+ la_oenb[121]
+ la_oenb[122]
+ la_oenb[123]
+ la_oenb[124]
+ la_oenb[125]
+ la_oenb[126]
+ la_oenb[127]
+ la_oenb[12]
+ la_oenb[13]
+ la_oenb[14]
+ la_oenb[15]
+ la_oenb[16]
+ la_oenb[17]
+ la_oenb[18]
+ la_oenb[19]
+ la_oenb[1]
+ la_oenb[20]
+ la_oenb[21]
+ la_oenb[22]
+ la_oenb[23]
+ la_oenb[24]
+ la_oenb[25]
+ la_oenb[26]
+ la_oenb[27]
+ la_oenb[28]
+ la_oenb[29]
+ la_oenb[2]
+ la_oenb[30]
+ la_oenb[31]
+ la_oenb[32]
+ la_oenb[33]
+ la_oenb[34]
+ la_oenb[35]
+ la_oenb[36]
+ la_oenb[37]
+ la_oenb[38]
+ la_oenb[39]
+ la_oenb[3]
+ la_oenb[40]
+ la_oenb[41]
+ la_oenb[42]
+ la_oenb[43]
+ la_oenb[44]
+ la_oenb[45]
+ la_oenb[46]
+ la_oenb[47]
+ la_oenb[48]
+ la_oenb[49]
+ la_oenb[4]
+ la_oenb[50]
+ la_oenb[51]
+ la_oenb[52]
+ la_oenb[53]
+ la_oenb[54]
+ la_oenb[55]
+ la_oenb[56]
+ la_oenb[57]
+ la_oenb[58]
+ la_oenb[59]
+ la_oenb[5]
+ la_oenb[60]
+ la_oenb[61]
+ la_oenb[62]
+ la_oenb[63]
+ la_oenb[64]
+ la_oenb[65]
+ la_oenb[66]
+ la_oenb[67]
+ la_oenb[68]
+ la_oenb[69]
+ la_oenb[6]
+ la_oenb[70]
+ la_oenb[71]
+ la_oenb[72]
+ la_oenb[73]
+ la_oenb[74]
+ la_oenb[75]
+ la_oenb[76]
+ la_oenb[77]
+ la_oenb[78]
+ la_oenb[79]
+ la_oenb[7]
+ la_oenb[80]
+ la_oenb[81]
+ la_oenb[82]
+ la_oenb[83]
+ la_oenb[84]
+ la_oenb[85]
+ la_oenb[86]
+ la_oenb[87]
+ la_oenb[88]
+ la_oenb[89]
+ la_oenb[8]
+ la_oenb[90]
+ la_oenb[91]
+ la_oenb[92]
+ la_oenb[93]
+ la_oenb[94]
+ la_oenb[95]
+ la_oenb[96]
+ la_oenb[97]
+ la_oenb[98]
+ la_oenb[99]
+ la_oenb[9]
  user_clock2
- mprj/clkload0/X
- mprj/clkload1/X
- mprj/clkload2/X
- mprj/user_proj_example_141/HI
- mprj/user_proj_example_142/HI
- mprj/user_proj_example_143/HI
- mprj/user_proj_example_144/HI
- mprj/user_proj_example_145/HI
- mprj/user_proj_example_146/HI
- mprj/user_proj_example_147/HI
- mprj/user_proj_example_148/HI
- mprj/user_proj_example_149/HI
- mprj/user_proj_example_150/HI
- mprj/user_proj_example_151/HI
- mprj/user_proj_example_152/HI
- mprj/user_proj_example_153/HI
- mprj/user_proj_example_154/HI
- mprj/user_proj_example_155/HI
- mprj/user_proj_example_156/HI
- mprj/user_proj_example_157/HI
- mprj/user_proj_example_158/HI
- mprj/user_proj_example_159/HI
- mprj/user_proj_example_160/HI
- mprj/user_proj_example_161/HI
- mprj/user_proj_example_162/HI
- mprj/user_proj_example_163/HI
- mprj/user_proj_example_164/HI
- mprj/user_proj_example_165/HI
- mprj/user_proj_example_166/HI
- mprj/user_proj_example_167/HI
- mprj/user_proj_example_168/HI
- mprj/user_proj_example_169/HI
- mprj/user_proj_example_170/HI
- mprj/user_proj_example_171/HI
- mprj/user_proj_example_172/HI
- mprj/user_proj_example_173/HI
- mprj/user_proj_example_174/HI
- mprj/user_proj_example_175/HI
- mprj/user_proj_example_176/HI
- mprj/user_proj_example_177/HI
- mprj/user_proj_example_178/HI
- mprj/user_proj_example_179/HI
- mprj/user_proj_example_180/HI
- mprj/user_proj_example_181/HI
- mprj/user_proj_example_182/HI
- mprj/user_proj_example_183/HI
- mprj/user_proj_example_184/HI
- mprj/user_proj_example_185/HI
- mprj/user_proj_example_186/HI
- mprj/user_proj_example_187/HI
- mprj/user_proj_example_188/HI
- mprj/user_proj_example_189/HI
- mprj/user_proj_example_190/HI
- mprj/user_proj_example_191/HI
- mprj/user_proj_example_192/HI
- mprj/user_proj_example_193/HI
- mprj/user_proj_example_194/HI
- mprj/user_proj_example_195/HI
- mprj/user_proj_example_196/HI
- mprj/user_proj_example_197/HI
- mprj/user_proj_example_198/HI
- mprj/user_proj_example_199/HI
- mprj/user_proj_example_200/HI
- mprj/user_proj_example_201/HI
- mprj/user_proj_example_202/HI
- mprj/user_proj_example_203/HI
- mprj/user_proj_example_204/HI
- mprj/user_proj_example_205/HI
- mprj/user_proj_example_206/HI
- mprj/user_proj_example_207/HI
- mprj/user_proj_example_208/HI
- mprj/user_proj_example_209/HI
- mprj/user_proj_example_210/HI
- mprj/user_proj_example_211/HI
- mprj/user_proj_example_212/HI
- mprj/user_proj_example_213/HI
- mprj/user_proj_example_214/HI
- mprj/user_proj_example_215/HI
- mprj/user_proj_example_216/HI
- mprj/user_proj_example_217/HI
- mprj/user_proj_example_218/HI
- mprj/user_proj_example_219/HI
- mprj/user_proj_example_220/HI
- mprj/user_proj_example_221/HI
- mprj/user_proj_example_222/HI
- mprj/user_proj_example_223/HI
- mprj/user_proj_example_224/HI
- mprj/user_proj_example_225/HI
- mprj/user_proj_example_226/HI
- mprj/user_proj_example_227/HI
- mprj/user_proj_example_228/HI
- mprj/user_proj_example_229/HI
- mprj/user_proj_example_230/HI
- mprj/user_proj_example_231/HI
- mprj/user_proj_example_232/HI
- mprj/user_proj_example_233/HI
- mprj/user_proj_example_234/HI
- mprj/user_proj_example_235/HI
- mprj/user_proj_example_236/HI
- mprj/user_proj_example_237/HI
- mprj/user_proj_example_238/HI
- mprj/user_proj_example_239/HI
- mprj/user_proj_example_240/HI
- mprj/user_proj_example_241/HI
- mprj/user_proj_example_242/HI
- mprj/user_proj_example_243/HI
- mprj/user_proj_example_244/HI
- mprj/user_proj_example_245/HI
- mprj/user_proj_example_246/HI
- mprj/user_proj_example_247/HI
- mprj/user_proj_example_248/HI
- mprj/user_proj_example_249/HI
- mprj/user_proj_example_250/HI
- mprj/user_proj_example_251/HI
- mprj/user_proj_example_252/HI
- mprj/user_proj_example_253/HI
- mprj/user_proj_example_254/HI
- mprj/user_proj_example_255/HI
- mprj/user_proj_example_256/HI
- mprj/user_proj_example_257/HI
- mprj/user_proj_example_258/HI
- mprj/user_proj_example_259/HI
- mprj/user_proj_example_260/HI
- mprj/user_proj_example_261/HI
- mprj/user_proj_example_262/HI
- mprj/user_proj_example_263/HI
- mprj/user_proj_example_264/HI
- mprj/user_proj_example_265/HI
- mprj/user_proj_example_266/HI
- mprj/user_proj_example_267/HI
- mprj/user_proj_example_268/HI
- mprj/user_proj_example_269/HI
- mprj/user_proj_example_270/HI
- mprj/user_proj_example_271/HI
+ wbs_adr_i[0]
+ wbs_adr_i[10]
+ wbs_adr_i[11]
+ wbs_adr_i[12]
+ wbs_adr_i[13]
+ wbs_adr_i[14]
+ wbs_adr_i[15]
+ wbs_adr_i[16]
+ wbs_adr_i[17]
+ wbs_adr_i[18]
+ wbs_adr_i[19]
+ wbs_adr_i[1]
+ wbs_adr_i[20]
+ wbs_adr_i[21]
+ wbs_adr_i[22]
+ wbs_adr_i[23]
+ wbs_adr_i[24]
+ wbs_adr_i[25]
+ wbs_adr_i[26]
+ wbs_adr_i[27]
+ wbs_adr_i[28]
+ wbs_adr_i[29]
+ wbs_adr_i[2]
+ wbs_adr_i[30]
+ wbs_adr_i[31]
+ wbs_adr_i[3]
+ wbs_adr_i[4]
+ wbs_adr_i[5]
+ wbs_adr_i[6]
+ wbs_adr_i[7]
+ wbs_adr_i[8]
+ wbs_adr_i[9]
+ wbs_cyc_i
+ wbs_dat_i[0]
+ wbs_dat_i[10]
+ wbs_dat_i[11]
+ wbs_dat_i[12]
+ wbs_dat_i[13]
+ wbs_dat_i[14]
+ wbs_dat_i[15]
+ wbs_dat_i[16]
+ wbs_dat_i[17]
+ wbs_dat_i[18]
+ wbs_dat_i[19]
+ wbs_dat_i[1]
+ wbs_dat_i[20]
+ wbs_dat_i[21]
+ wbs_dat_i[22]
+ wbs_dat_i[23]
+ wbs_dat_i[24]
+ wbs_dat_i[25]
+ wbs_dat_i[26]
+ wbs_dat_i[27]
+ wbs_dat_i[28]
+ wbs_dat_i[29]
+ wbs_dat_i[2]
+ wbs_dat_i[30]
+ wbs_dat_i[31]
+ wbs_dat_i[3]
+ wbs_dat_i[4]
+ wbs_dat_i[5]
+ wbs_dat_i[6]
+ wbs_dat_i[7]
+ wbs_dat_i[8]
+ wbs_dat_i[9]
+ wbs_sel_i[0]
+ wbs_sel_i[1]
+ wbs_sel_i[2]
+ wbs_sel_i[3]
+ wbs_stb_i
+ wbs_we_i
+ rgb_mixer/_715__20/HI
+ rgb_mixer/clkload0/Y
+ rgb_mixer/clkload1/X
+ rgb_mixer/clkload10/Y
+ rgb_mixer/clkload11/Y
+ rgb_mixer/clkload12/Y
+ rgb_mixer/clkload13/X
+ rgb_mixer/clkload14/X
+ rgb_mixer/clkload2/Y
+ rgb_mixer/clkload3/Y
+ rgb_mixer/clkload4/X
+ rgb_mixer/clkload5/Y
+ rgb_mixer/clkload6/X
+ rgb_mixer/clkload7/X
+ rgb_mixer/clkload8/Y
+ rgb_mixer/clkload9/Y
+ rgb_mixer/rgb_mixer_21/HI
+ rgb_mixer/rgb_mixer_22/HI
+ rgb_mixer/rgb_mixer_23/HI
+ rgb_mixer/rgb_mixer_24/HI
+ rgb_mixer/rgb_mixer_25/HI
+ rgb_mixer/rgb_mixer_26/HI
+ rgb_mixer/rgb_mixer_27/HI
+ rgb_mixer/rgb_mixer_28/HI
+ rgb_mixer/rgb_mixer_29/HI
+ rgb_mixer/rgb_mixer_30/LO
 Found 0 partially unannotated drivers.
 
 ===========================================================================
-max slew violation count 4
-max fanout violation count 31
-max cap violation count 1
+max slew violation count 8
+max fanout violation count 14
+max cap violation count 0
 ============================================================================
 
 ===========================================================================
@@ -430,7 +664,7 @@ Warning: There are 68 input ports missing set_input_delay.
   io_in[8]
   io_in[9]
   user_clock2
-Warning: There are 236 unconstrained endpoints.
+Warning: There are 270 unconstrained endpoints.
   analog_io[0]
   analog_io[10]
   analog_io[11]
@@ -536,6 +770,7 @@ Warning: There are 236 unconstrained endpoints.
   io_out[7]
   io_out[8]
   io_out[9]
+  la_data_out[0]
   la_data_out[100]
   la_data_out[101]
   la_data_out[102]
@@ -546,6 +781,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[107]
   la_data_out[108]
   la_data_out[109]
+  la_data_out[10]
   la_data_out[110]
   la_data_out[111]
   la_data_out[112]
@@ -556,6 +792,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[117]
   la_data_out[118]
   la_data_out[119]
+  la_data_out[11]
   la_data_out[120]
   la_data_out[121]
   la_data_out[122]
@@ -564,10 +801,15 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[125]
   la_data_out[126]
   la_data_out[127]
+  la_data_out[12]
+  la_data_out[13]
+  la_data_out[14]
+  la_data_out[15]
   la_data_out[16]
   la_data_out[17]
   la_data_out[18]
   la_data_out[19]
+  la_data_out[1]
   la_data_out[20]
   la_data_out[21]
   la_data_out[22]
@@ -578,6 +820,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[27]
   la_data_out[28]
   la_data_out[29]
+  la_data_out[2]
   la_data_out[30]
   la_data_out[31]
   la_data_out[32]
@@ -588,6 +831,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[37]
   la_data_out[38]
   la_data_out[39]
+  la_data_out[3]
   la_data_out[40]
   la_data_out[41]
   la_data_out[42]
@@ -598,6 +842,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[47]
   la_data_out[48]
   la_data_out[49]
+  la_data_out[4]
   la_data_out[50]
   la_data_out[51]
   la_data_out[52]
@@ -608,6 +853,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[57]
   la_data_out[58]
   la_data_out[59]
+  la_data_out[5]
   la_data_out[60]
   la_data_out[61]
   la_data_out[62]
@@ -618,6 +864,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[67]
   la_data_out[68]
   la_data_out[69]
+  la_data_out[6]
   la_data_out[70]
   la_data_out[71]
   la_data_out[72]
@@ -628,6 +875,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[77]
   la_data_out[78]
   la_data_out[79]
+  la_data_out[7]
   la_data_out[80]
   la_data_out[81]
   la_data_out[82]
@@ -638,6 +886,7 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[87]
   la_data_out[88]
   la_data_out[89]
+  la_data_out[8]
   la_data_out[90]
   la_data_out[91]
   la_data_out[92]
@@ -648,13 +897,23 @@ Warning: There are 236 unconstrained endpoints.
   la_data_out[97]
   la_data_out[98]
   la_data_out[99]
+  la_data_out[9]
   user_irq[0]
   user_irq[1]
   user_irq[2]
+  wbs_ack_o
+  wbs_dat_o[0]
+  wbs_dat_o[10]
+  wbs_dat_o[11]
+  wbs_dat_o[12]
+  wbs_dat_o[13]
+  wbs_dat_o[14]
+  wbs_dat_o[15]
   wbs_dat_o[16]
   wbs_dat_o[17]
   wbs_dat_o[18]
   wbs_dat_o[19]
+  wbs_dat_o[1]
   wbs_dat_o[20]
   wbs_dat_o[21]
   wbs_dat_o[22]
@@ -665,5 +924,14 @@ Warning: There are 236 unconstrained endpoints.
   wbs_dat_o[27]
   wbs_dat_o[28]
   wbs_dat_o[29]
+  wbs_dat_o[2]
   wbs_dat_o[30]
   wbs_dat_o[31]
+  wbs_dat_o[3]
+  wbs_dat_o[4]
+  wbs_dat_o[5]
+  wbs_dat_o[6]
+  wbs_dat_o[7]
+  wbs_dat_o[8]
+  wbs_dat_o[9]
+  rgb_mixer/_715_/D

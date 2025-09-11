@@ -88,7 +88,7 @@ rgb_mixer rgb_mixer(
 	.vssd1(vssd1),	// User area 1 digital ground
 `endif
     .clk(wb_clk_i),
-    .reset(la_data_in[0]),
+    .reset(wb_rst_i),
     .enc0_a(io_in[8]),
     .enc0_b(io_in[9]),
     .enc1_a(io_in[10]),
