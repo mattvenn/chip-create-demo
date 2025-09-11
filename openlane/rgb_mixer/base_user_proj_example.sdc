@@ -78,6 +78,8 @@ if { $::env(IO_SYNC) } {
 	set_input_delay -max [expr $in_ext_delay + 4.55] -clock [get_clocks {clk}] [get_ports {io_in[*]}]
 	set_input_delay -min [expr $in_ext_delay + 1.26] -clock [get_clocks {clk}] [get_ports {io_in[*]}]
 }
+set_input_delay -max 1.87 -clock [get_clocks {clk}] [get_ports {la_data_in[*]}]
+set_input_delay -min 0.18 -clock [get_clocks {clk}] [get_ports {la_data_in[*]}]
 
 # Input Transition
 set_input_transition -max 0.38  [get_ports {enc0_a}]
@@ -86,6 +88,8 @@ set_input_transition -max 0.38  [get_ports {enc1_a}]
 set_input_transition -max 0.38  [get_ports {enc1_b}]
 set_input_transition -max 0.38  [get_ports {enc2_a}]
 set_input_transition -max 0.38  [get_ports {enc2_b}]
+set_input_transition -max 0.86  [get_ports {la_data_in[*]}]
+set_input_transition -min 0.07  [get_ports {la_data_in[*]}]
 
 if { $::env(IO_SYNC) } {
 	set out_ext_delay 4
